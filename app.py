@@ -11,7 +11,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config["CORS_HEADERS"] = "Content-Type"
 
-@app.route('/sendOTP', methods=['GET'])
+@app.route('/sendOTP', methods=['POST'])
 @cross_origin()
 def sendOTP():
     connection = sqlite3.connect('database.db')
